@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Jute Bag QR Scanner - Eco-Friendly Dark Theme */
+
+@layer base {
+  :root {
+    /* Light mode - Light Cream #FFF6EB */
+    --background: 35 100% 96%;
+    --foreground: 22 25% 18%;
+
+    --card: 35 80% 97%;
+    --card-foreground: 22 25% 18%;
+
+    --popover: 35 60% 94%;
+    --popover-foreground: 22 25% 18%;
+
+    /* Espresso Brown #3A2C23 */
+    --primary: 22 25% 18%;
+    --primary-foreground: 35 100% 96%;
+
+    /* Terracotta #C97B63 */
+    --secondary: 14 50% 59%;
+    --secondary-foreground: 35 100% 96%;
+
+    /* Muted warm tones */
+    --muted: 35 40% 90%;
+    --muted-foreground: 22 15% 40%;
+
+    /* Olive Green #7A8450 */
+    --accent: 72 25% 42%;
+    --accent-foreground: 35 100% 96%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 30% 86%;
+    --input: 35 30% 86%;
+    --ring: 22 25% 18%;
+
+    --radius: 0.625rem;
+
+    /* Custom jute theme colors */
+    --jute: 35 60% 78%;
+    --jute-foreground: 22 25% 18%;
+    --leaf: 72 25% 42%;
+    --leaf-light: 72 20% 55%;
+    --sunshine: 14 50% 59%;
+    --sunshine-light: 14 40% 72%;
+    --earth: 22 25% 18%;
+    --earth-light: 22 18% 35%;
+    --sky: 72 25% 42%;
+    --coral: 14 50% 59%;
+    
+    /* Charts */
+    --chart-1: 22 25% 18%;
+    --chart-2: 14 50% 59%;
+    --chart-3: 72 25% 42%;
+    --chart-4: 35 60% 78%;
+    --chart-5: 22 18% 35%;
+    
+    /* Sidebar */
+    --sidebar: 35 80% 97%;
+    --sidebar-foreground: 22 25% 18%;
+    --sidebar-primary: 22 25% 18%;
+    --sidebar-primary-foreground: 35 100% 96%;
+    --sidebar-accent: 72 25% 42%;
+    --sidebar-accent-foreground: 35 100% 96%;
+    --sidebar-border: 35 30% 86%;
+    --sidebar-ring: 22 25% 18%;
+    
+    /* Typography */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Fredoka', sans-serif;
+    
+    /* Shadows */
+    --shadow-2xs: 0 1px 2px 0 hsl(30 15% 15% / 0.03);
+    --shadow-xs: 0 1px 3px 0 hsl(30 15% 15% / 0.04);
+    --shadow-sm: 0 2px 4px -1px hsl(30 15% 15% / 0.06), 0 1px 2px -1px hsl(30 15% 15% / 0.04);
+    --shadow: 0 4px 6px -1px hsl(30 15% 15% / 0.08), 0 2px 4px -2px hsl(30 15% 15% / 0.05);
+    --shadow-md: 0 6px 10px -2px hsl(30 15% 15% / 0.1), 0 3px 6px -3px hsl(30 15% 15% / 0.06);
+    --shadow-lg: 0 10px 20px -3px hsl(30 15% 15% / 0.12), 0 4px 8px -4px hsl(30 15% 15% / 0.08);
+    --shadow-xl: 0 20px 30px -5px hsl(30 15% 15% / 0.15), 0 8px 12px -6px hsl(30 15% 15% / 0.1);
+    --shadow-2xl: 0 25px 50px -12px hsl(30 15% 15% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    /* Dark mode - deep espresso */
+    --background: 22 25% 7%;
+    --foreground: 35 60% 92%;
+
+    --card: 22 20% 11%;
+    --card-foreground: 35 60% 92%;
+
+    --popover: 22 18% 13%;
+    --popover-foreground: 35 60% 92%;
+
+    /* Warm cream for dark mode primary */
+    --primary: 35 60% 78%;
+    --primary-foreground: 22 25% 7%;
+
+    /* Terracotta lighter for dark */
+    --secondary: 14 50% 65%;
+    --secondary-foreground: 22 25% 7%;
+
+    /* Muted dark tones */
+    --muted: 22 12% 20%;
+    --muted-foreground: 35 20% 62%;
+
+    /* Olive green brighter for dark */
+    --accent: 72 25% 52%;
+    --accent-foreground: 22 25% 7%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 22 12% 18%;
+    --input: 22 12% 16%;
+    --ring: 35 60% 78%;
+
+    /* Dark mode jute colors */
+    --jute: 35 45% 58%;
+    --jute-foreground: 35 60% 92%;
+    --leaf: 72 25% 52%;
+    --leaf-light: 72 20% 60%;
+    --sunshine: 14 50% 65%;
+    --sunshine-light: 14 40% 55%;
+    --earth: 22 18% 35%;
+    --earth-light: 22 15% 48%;
+    --sky: 72 25% 52%;
+    --coral: 14 50% 65%;
+    
+    /* Charts dark mode */
+    --chart-1: 35 60% 78%;
+    --chart-2: 14 50% 65%;
+    --chart-3: 72 25% 52%;
+    --chart-4: 35 45% 58%;
+    --chart-5: 22 18% 45%;
+    
+    /* Sidebar dark mode */
+    --sidebar: 22 20% 9%;
+    --sidebar-foreground: 35 60% 92%;
+    --sidebar-primary: 35 60% 78%;
+    --sidebar-primary-foreground: 22 25% 7%;
+    --sidebar-accent: 72 25% 52%;
+    --sidebar-accent-foreground: 22 25% 7%;
+    --sidebar-border: 22 12% 18%;
+    --sidebar-ring: 35 60% 78%;
+    
+    /* Dark shadows */
+    --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.15);
+    --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.2);
+    --shadow-sm: 0 2px 4px -1px hsl(0 0% 0% / 0.25), 0 1px 2px -1px hsl(0 0% 0% / 0.15);
+    --shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 6px 10px -2px hsl(0 0% 0% / 0.35), 0 3px 6px -3px hsl(0 0% 0% / 0.25);
+    --shadow-lg: 0 10px 20px -3px hsl(0 0% 0% / 0.4), 0 4px 8px -4px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 30px -5px hsl(0 0% 0% / 0.45), 0 8px 12px -6px hsl(0 0% 0% / 0.35);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  .prose {
+    max-width: 65ch;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(22 25% 18%) 0%, hsl(22 20% 25%) 40%, hsl(14 30% 35%) 100%);
+  }
+
+  .gradient-hero-dark {
+    background: linear-gradient(135deg, hsl(22 25% 8%) 0%, hsl(22 20% 12%) 50%, hsl(22 15% 16%) 100%);
+  }
+
+  .dark .gradient-hero {
+    background: linear-gradient(135deg, hsl(22 20% 10%) 0%, hsl(22 15% 14%) 50%, hsl(22 12% 10%) 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--leaf)) 0%, hsl(var(--sunshine)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bounce-hover {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .bounce-hover:hover {
+    transform: scale(1.05) translateY(-2px);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-count-up {
+    animation: count-up 1s ease-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+  }
+}
+
+@keyframes count-up {
+  0% { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scan-line {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(200px); }
+}
+
+.scan-line-animate {
+  animation: scan-line 2s ease-in-out infinite;
+}
