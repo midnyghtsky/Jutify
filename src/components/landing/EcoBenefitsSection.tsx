@@ -127,7 +127,6 @@ const EcoBenefitsSection = () => {
           </div>
         </div>
       </div>
-
       <style jsx>{`
         .jutify-survey-container {
           display: flex;
