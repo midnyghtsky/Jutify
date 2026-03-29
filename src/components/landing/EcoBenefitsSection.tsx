@@ -47,12 +47,7 @@ const benefits = [
 ];
 
 const EcoBenefitsSection = () => {
-  return (
-    import React from 'react';
-
-const SurveySection: React.FC = () => {
-  return (
-    <section className="py-20 bg-muted/30">
+  return (<section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -303,10 +298,6 @@ const SurveySection: React.FC = () => {
         }
       `}</style>
     </section>
-  );
-};
-
-export default SurveySection;
   );
 };
 
