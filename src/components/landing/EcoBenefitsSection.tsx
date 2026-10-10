@@ -92,6 +92,153 @@ const EcoBenefitsSection = () => {
           ))}
         </div>
       </div>
+      <div className="jutify-survey-container">
+          <div className="survey-card group">
+            <h3 className="survey-title">Survey: Help Us Improve!</h3>
+            <p className="survey-description">
+              We are constantly working to make Jutify the best experience possible for our users. 
+              Your feedback is the most important part of that journey. Please take a moment 
+              to share your thoughts, suggestions, and ideas with us.
+            </p>
+            
+            <a 
+              href="https://survey.sogolytics.com/r/ZJqkJ5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="survey-button animate-pulse-glow"
+            >
+              <span>Take the survey</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="lucide lucide-arrow-right"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <style jsx>{`
+        .jutify-survey-container {
+          display: flex;
+          justify-content: center;
+          padding: 60px 0;
+          background: transparent;
+        }
+
+        .survey-card {
+          background: transparent;
+          border: none;
+          border-radius: 32px;
+          padding: 80px 40px;
+          width: 100%;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .survey-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+        }
+
+        .survey-title {
+          margin: 0 0 24px 0;
+          font-size: 3.5rem;
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          color: #fff;
+        }
+
+        .survey-description {
+          margin: 0 auto 48px auto;
+          font-size: 1.4rem;
+          opacity: 0.7;
+          line-height: 1.6;
+          max-width: 750px;
+          color: #fff;
+        }
+
+        .survey-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          text-decoration: none;
+          padding: 22px 64px;
+          border-radius: 100px;
+          font-size: 1.2rem;
+          font-weight: 700;
+          background-color: #d39380;
+          color: #1a1a1a;
+          transition: all 0.3s ease;
+          position: relative;
+          z-index: 2;
+        }
+
+        .survey-button :global(svg) {
+          transition: transform 0.2s ease;
+        }
+
+        .survey-button:hover {
+          transform: scale(1.05);
+          background-color: #e0a391;
+        }
+
+        .survey-button:hover :global(svg) {
+          transform: translateX(5px);
+        }
+
+        @keyframes pulse-glow {
+          0%, 100% {
+            box-shadow: 0 0 0 0 rgba(211, 147, 128, 0.5), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+          }
+          50% {
+            box-shadow: 0 0 25px 8px rgba(211, 147, 128, 0.5), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+          }
+        }
+
+        .animate-pulse-glow {
+          animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .survey-card::after {
+          content: "";
+          position: absolute;
+          bottom: -2rem;
+          right: -2rem;
+          width: 15rem;
+          height: 15rem;
+          background: #d39380;
+          border-radius: 50%;
+          filter: blur(80px);
+          opacity: 0.1;
+          pointer-events: none;
+          transition: opacity 0.4s ease;
+        }
+
+        .survey-card:hover::after {
+          opacity: 0.25;
+        }
+
+        @media (max-width: 768px) {
+          .survey-title { font-size: 2.2rem; }
+          .survey-description { font-size: 1.1rem; }
+          .survey-card { padding: 40px 20px; }
+          .survey-button { padding: 18px 40px; width: 100%; }
+        }
+      `}</style>
     </section>
   );
 };
